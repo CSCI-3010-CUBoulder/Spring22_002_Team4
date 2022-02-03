@@ -1,5 +1,6 @@
 /* String functions section */
 
+
 // Splits a single string on separator into a vector of strings
 std::vector<std::string> Split(std::string whole, std::string separator);
 
@@ -83,10 +84,24 @@ double Sum(std::vector<double> nums);
 double Product(std::vector<double> nums);
 
 // Adds an double n to each element of a given vector
-std::vector<double> VectorPlusN(std::vector<double> v, double n);
+// branch1
+std::vector<double> VectorPlusN(std::vector<double> v, double n){
+    for(int i = 0; i < v.length(); i++)
+    {
+        v[i] = v[i] + n;
+    }
+
+}
 
 // Multiples an double n with each element of a given vector
-std::vector<double> VectorTimesN(std::vector<double> v, double n);
+// branch1
+std::vector<double> VectorTimesN(std::vector<double> v, double n){
+     for(int i = 0; i < v.length(); i++)
+    {
+        v[i] = v[i] * n;
+    }
+
+}
 
 // takes in two doubles and returns a vector of size n with
 // values n*1, n*2, n*3... up to n*m
