@@ -1,4 +1,6 @@
 /* String functions section */
+#include <vector>
+#include <string>
 
 // Splits a single string on separator into a vector of strings
 std::vector<std::string> Split(std::string whole, std::string separator);
@@ -57,7 +59,14 @@ std::vector<int> SquaresUntil(int n);
 int NthFibonacci(int n);
 
 // takes an int, n, and returns the factorial of that int (n!)
-int Factorial(int n);
+int Factorial(int n){
+    int i = n;
+    while (i != 1){
+        n = i * (i-1);
+        i-=1;
+    }
+    return n;
+}
 
 // returns -1 if the number is negative and 1 if positive
 int Sign(int num);
@@ -98,7 +107,17 @@ std::vector<double> VectorTimesN(std::vector<double> v, double n);
 std::vector<double> Multiples(double n, double m);
 
 // returns -1 if the number is negative and 1 if positive
-double Sign(double num);
+double Sign(double num){
+    if (num > 0){
+        return 1;
+    }
+    else if (num < 0){
+        return -1;
+    }
+    else{
+        return 0;
+    }
+}
 
 
 // adds n to each element of the vector
